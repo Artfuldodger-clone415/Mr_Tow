@@ -1,0 +1,126 @@
+:root{
+  /* warmer palette for towing service */
+  --bg: #fbfbfc;
+  --card: #ffffff;
+  --accent: #ff6b00; /* call-to-action orange */
+  --muted: #55606a;
+  --accent-2: #ff4d4f;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#111; margin:0}
+
+/* center the whole app and give breathing room */
+.app-root{max-width:1200px;margin:0 auto;padding:28px 32px}
+
+.topbar{position:fixed;left:0;right:0;top:0;height:68px;background:rgba(255,255,255,0.96);display:flex;align-items:center;justify-content:space-between;padding:10px 36px;z-index:40;border-bottom:1px solid rgba(16,24,40,0.03)}
+.topbar-shadow{box-shadow:0 8px 30px rgba(11,20,40,0.06)}
+.brand{font-weight:800;color:var(--accent);font-size:1.15rem;letter-spacing:0.2px}
+.brand.logo{display:flex;align-items:center;gap:10px}
+.brand img{height:36px;width:auto;display:inline-block}
+.brand .brand-text{display:inline-block;font-weight:800;color:var(--accent);font-size:1.05rem}
+.nav-desktop a{margin-left:20px;color:var(--muted);text-decoration:none;padding:8px}
+.mobile-toggle{display:none;border:0;background:transparent;font-size:20px}
+
+.header-actions{display:flex;align-items:center;gap:12px}
+.btn.header-call{background:linear-gradient(180deg,#ff7a18,#ff5e00);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 22px rgba(255,90,34,0.12)}
+.btn.header-call.mobile{width:100%;display:block;text-align:center}
+
+/* Desktop nav layout tweaks */
+.nav-desktop{display:flex;align-items:center;gap:6px}
+.nav-desktop a{color:rgba(16,24,40,0.65);padding:8px 10px;border-radius:8px}
+.nav-desktop a:hover{background:rgba(11,102,255,0.06);color:var(--accent)}
+
+/* active nav link */
+.nav-desktop a.active{background:linear-gradient(90deg, rgba(255,107,0,0.12), rgba(255,107,0,0.06));color:var(--accent);font-weight:700}
+
+/* smooth scroll */
+html { scroll-behavior: smooth; }
+
+.full-hero{min-height:75vh;background-image:linear-gradient(0deg, rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/Hero-Tow.png');background-size:cover;background-position:center;border-radius:6px;margin-top:78px;display:flex;align-items:center;justify-content:center;position:relative;padding:18px}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.36), rgba(2,6,23,0.22));mix-blend-mode:normal;border-radius:6px}
+.hero-inner{max-width:980px;text-align:center;position:relative;padding:56px 36px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:8px}
+.hero-title{font-size:2.8rem;color:#fff;margin:0 0 10px;font-weight:800;text-shadow:0 10px 30px rgba(2,6,23,0.45);letter-spacing:0.6px}
+.hero-lead{color:rgba(255,255,255,0.9);margin-bottom:22px;font-size:1.05rem}
+.lead{color:var(--muted);margin-bottom:18px}
+.hero-cta{display:flex;gap:14px;justify-content:center;margin-bottom:14px}
+.btn{padding:14px 20px;border-radius:12px;text-decoration:none;display:inline-block;font-weight:600}
+.btn.primary{background:linear-gradient(180deg,var(--accent),#0856e6);color:#fff;box-shadow:0 12px 30px rgba(11,102,255,0.14);border:0}
+.btn.outline{border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);color:#fff}
+.btn:focus{outline:2px solid rgba(11,102,255,0.18);outline-offset:2px}
+.hero-meta{display:flex;gap:18px;justify-content:center;color:rgba(255,255,255,0.9);font-size:0.95rem;margin-top:8px}
+
+.services{padding:56px 0;background:linear-gradient(180deg,#fff,#fbfbff)}
+.services h2{margin:0 0 20px;text-align:center;font-size:1.6rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.04)}
+.service-card h3{margin:0 0 10px;color:var(--accent-2);font-size:1.05rem}
+.service-card p{margin:0;color:var(--muted);font-size:0.95rem}
+
+/* small thumbnail inside service cards */
+.service-card img{width:100%;height:auto;border-radius:8px;object-fit:cover}
+
+.faq{padding:48px 0}
+.faq h2{text-align:center;margin-bottom:12px;font-size:1.5rem}
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto}
+.faq-item{background:linear-gradient(180deg,#fff,#fbfcff);padding:14px 16px;border-radius:10px;border:1px solid rgba(16,24,40,0.03)}
+
+.contact{padding:48px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.contact-card{background:var(--card);padding:18px;border-radius:10px;text-align:center}
+.contact-card h3{margin:0 0 8px}
+
+.footer{padding:28px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(16,24,40,0.03);background:linear-gradient(180deg,transparent,rgba(0,0,0,0.01))}
+
+/* Gallery styles */
+.gallery{padding:48px 0;background:linear-gradient(180deg,#fff,#fbfdff)}
+.gallery h2{text-align:center;margin-bottom:18px;font-size:1.6rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1200px;margin:0 auto}
+.gallery-item{overflow:hidden;border-radius:10px;background:var(--card);box-shadow:0 8px 24px rgba(16,24,40,0.04)}
+.gallery-item img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .28s ease}
+.gallery-item img:hover{transform:scale(1.03)}
+
+.about{padding:48px 0;background:linear-gradient(180deg,#fff,#f8fbff)}
+.about-inner{max-width:900px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+
+.reviews{padding:48px 0}
+.reviews-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.review{background:var(--card);padding:12px 16px;border-radius:8px;box-shadow:0 8px 20px rgba(16,24,40,0.04)}
+
+
+@media (max-width:900px){
+  .app-root{padding:18px}
+  .mobile-toggle{display:block}
+  .nav-desktop{display:none}
+  .full-hero{min-height:62vh;margin-top:64px}
+  .hero-title{font-size:1.6rem}
+  .hero-inner{padding:20px}
+  .hero-cta{flex-direction:column;gap:10px}
+  .btn{width:100%}
+}
+
+/* mobile nav overlay */
+.nav-mobile{position:fixed;top:64px;left:0;right:0;background:#fff;padding:12px;display:flex;flex-direction:column;gap:8px;z-index:50}
+.nav-mobile a{padding:8px 12px;border-radius:6px;color:var(--accent);text-decoration:none}
+
+/* make mobile call-to-action visible */
+.nav-mobile .btn.header-call{margin-top:8px}
+
+/* Chat widget */
+.chat-widget{position:fixed;right:18px;bottom:18px;z-index:120}
+.chat-button{width:56px;height:56px;border-radius:999px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 12px 30px rgba(0,0,0,0.12);cursor:pointer}
+.chat-panel{width:320px;height:420px;background:var(--card);border-radius:12px;box-shadow:0 18px 60px rgba(16,24,40,0.12);overflow:hidden;display:flex;flex-direction:column;margin-bottom:12px}
+.chat-panel[hidden]{display:none}
+.chat-header{background:linear-gradient(90deg,var(--accent),#e85a00);color:#fff;padding:12px 14px;font-weight:700}
+.chat-list{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:linear-gradient(180deg,#fff,#fbfbff)}
+.chat-msg{padding:8px 10px;border-radius:8px;max-width:84%}
+.chat-msg.user{align-self:flex-end;background:linear-gradient(180deg,#0b66ff,#0856e6);color:#fff}
+.chat-msg.bot{align-self:flex-start;background:#f3f6fb;color:var(--muted)}
+.chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(16,24,40,0.03)}
+.chat-form input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(16,24,40,0.06)}
+.chat-form button{padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;border:0}
+
+@media (max-width:600px){
+  .chat-panel{width:92vw;right:12px;left:12px}
+  .chat-widget{right:8px;bottom:8px}
+}
